@@ -69,6 +69,7 @@ Plugin 'evanmiller/nginx-vim-syntax'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'majutsushi/tagbar'
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'mhinz/vim-signify'
 
 "Plugin 'Valloric/YouCompleteMe'
 
@@ -112,7 +113,7 @@ set cursorline
 
 let g:ctrlp_working_path_mode = 'c'
 
-set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,latin1
+"set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,latin1
 
 cs add GTAGS
 cs add ../GTAGS
