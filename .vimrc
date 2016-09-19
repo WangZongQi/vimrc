@@ -84,6 +84,13 @@ set cscopetag
 set cscopeprg=gtags-cscope
 let g:Gtags_OpenQuickfixWindow=0
 
+" Airline
+" Do not show message about whitespace
+let g:airline#extensions#whitespace#show_message = 0
+
+" CtrlP
+let g:ctrlp_working_path_mode = 'c'
+
 "taglist
 "let Tlist_Auto_Update=1
 "let Tlist_GainFocus_On_ToggleOpen=1
@@ -110,8 +117,6 @@ set selection=inclusive
 set clipboard=unnamed
 
 set cursorline
-
-let g:ctrlp_working_path_mode = 'c'
 
 "set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,latin1
 
