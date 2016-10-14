@@ -41,8 +41,8 @@ if (has("win32") || has("win95") || has("win64") || has("win16"))
 	set rtp+=D:/Vim/vimfiles/bundle/Vundle.vim/ 
 	call vundle#begin('D:/Vim/vimfiles/bundle')
 else
-	set rtp+=/usr/share/vim/addons/bundle/Vundle.vim/ 
-	call vundle#begin('/usr/share/vim/addons/bundle')
+	set rtp+=~/Vim/addons/bundle/Vundle.vim/ 
+	call vundle#begin('~/Vim/addons/bundle')
 endif
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
