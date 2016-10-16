@@ -11,7 +11,10 @@ if (has("win32") || has("win95") || has("win64") || has("win16"))
 	set diffexpr=MyDiff()
 
 	set guifont=Consolas:h14
-else
+elseif (has("mac"))
+	set fu
+	set guifont=Monaco:h14
+else 
 	set guifont=Monospace\ 12
 endif
 
