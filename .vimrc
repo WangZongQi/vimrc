@@ -12,7 +12,7 @@ if (has("win32") || has("win95") || has("win64") || has("win16"))
 
 	set guifont=Consolas:h14
 elseif (has("mac"))
-	set fu
+	"set fu
 	set guifont=Monaco:h14
 else 
 	set guifont=Monospace\ 12
@@ -83,6 +83,8 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 set omnifunc=syntaxcomplete#Complete
+
+syntax on
 
 " gTags
 set cscopetag
