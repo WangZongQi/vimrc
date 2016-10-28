@@ -117,6 +117,7 @@ nnoremap <F12> <Esc>:GtagsCursor<CR>
 set wrap
 set number
 set tabstop=4
+set expandtab
 set shiftwidth=4
 set showcmd
 set selection=inclusive
