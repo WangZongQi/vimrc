@@ -75,6 +75,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'mhinz/vim-signify'
 Plugin 'keith/swift.vim'
+Plugin 'tpope/vim-surround'
 
 "Plugin 'Valloric/YouCompleteMe'
 
