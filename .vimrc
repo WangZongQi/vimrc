@@ -110,7 +110,7 @@ set noswapfile
 set noundofile
 
 set foldmethod=indent
-set foldlevelstart=8
+set foldlevelstart=12
 nnoremap <space> za
 nnoremap <F12> <Esc>:GtagsCursor<CR>
 
