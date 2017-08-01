@@ -40,13 +40,8 @@ set guioptions-=T
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-if (has("win32") || has("win95") || has("win64") || has("win16"))
-	set rtp+=D:/Vim/vimfiles/bundle/Vundle.vim/ 
-	call vundle#begin('D:/Vim/vimfiles/bundle')
-else
-	set rtp+=~/.Vim/addons/bundle/Vundle.vim/ 
-	call vundle#begin('~/.Vim/addons/bundle')
-endif
+set rtp+=~/.Vim/bundle/Vundle.vim/ 
+call vundle#begin('~/.Vim/bundle')
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
