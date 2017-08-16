@@ -71,6 +71,7 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'mhinz/vim-signify'
 Plugin 'keith/swift.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'nathanaelkane/vim-indent-guides'
 "Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
