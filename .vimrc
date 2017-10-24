@@ -10,7 +10,7 @@ if (has("win32") || has("win95") || has("win64") || has("win16"))
 
 	set diffexpr=MyDiff()
 
-	set guifont=Consolas:h14
+	set guifont=Consolas:h12
 elseif (has("mac"))
 	"set fu
 	set guifont=Monaco:h14
@@ -64,7 +64,6 @@ Plugin 'rking/ag.vim'
 Plugin 'rhysd/clever-f.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'mattn/emmet-vim'
-Plugin 'evanmiller/nginx-vim-syntax'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'majutsushi/tagbar'
 Plugin 'Shougo/neocomplete.vim'
@@ -121,6 +120,7 @@ set selection=inclusive
 set clipboard=unnamed
 
 set cursorline
+set incsearch
 
 "set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,latin1
 
@@ -149,8 +149,6 @@ set path+=../../..
 set path+=../../../..
 set path+=../../../../..
 set path+=../../../../../..
-
-au BufNewFile,BufRead *.gradle setf groovy
 
 function MyDiff()
   let opt = '-a --binary '
