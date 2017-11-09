@@ -111,7 +111,7 @@ nnoremap <F12> <Esc>:GtagsCursor<CR>
 
 set wrap
 set number
-set relativenumber
+"set relativenumber
 set tabstop=4
 set expandtab
 set shiftwidth=4
