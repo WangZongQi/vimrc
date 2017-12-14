@@ -60,18 +60,19 @@ Plugin 'terryma/vim-expand-region.git'
 Plugin 'sickill/vim-monokai'
 Plugin 'kshenoy/vim-signature.git'
 Plugin 'google/vim-searchindex'
-Plugin 'rking/ag.vim'
 Plugin 'rhysd/clever-f.vim'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'mattn/emmet-vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'majutsushi/tagbar'
-Plugin 'Shougo/neocomplete.vim'
+Plugin 'ervandew/supertab'
 Plugin 'mhinz/vim-signify'
-Plugin 'keith/swift.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'pboettch/vim-cmake-syntax'
+Plugin 'vim-scripts/DoxygenToolkit.vim'
+
 "Plugin 'Valloric/YouCompleteMe'
+"Plugin 'rking/ag.vim'
+"Plugin 'mattn/emmet-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -99,6 +100,8 @@ let g:ctrlp_working_path_mode = 'c'
 "let Tlist_Show_One_File=1
 
 colo monokai
+
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 set nobackup
 set noswapfile
