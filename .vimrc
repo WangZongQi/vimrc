@@ -45,7 +45,7 @@ call vundle#begin('~/.Vim/bundle')
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'jlanzarotta/bufexplorer.git'
+"Plugin 'jlanzarotta/bufexplorer.git'
 Plugin 'kien/ctrlp.vim.git'
 Plugin 'mbbill/fencview.git'
 Plugin 'vim-scripts/gtags.vim.git'
@@ -110,6 +110,8 @@ set noundofile
 set foldmethod=indent
 set foldlevelstart=12
 nnoremap <space> za
+nnoremap <Leader>b :CtrlPBuffer<CR>
+nnoremap <Leader>p :CtrlP<CR>
 nnoremap <F12> <Esc>:GtagsCursor<CR>
 
 set wrap
