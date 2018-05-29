@@ -64,6 +64,7 @@ Plugin 'rhysd/clever-f.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'majutsushi/tagbar'
 Plugin 'ervandew/supertab'
+Plugin 'Shougo/neocomplete.vim'
 Plugin 'mhinz/vim-signify'
 Plugin 'tpope/vim-surround'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -129,6 +130,13 @@ set cursorline
 set incsearch
 
 "set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,latin1
+
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
 
 cs add GTAGS
 cs add ../GTAGS
