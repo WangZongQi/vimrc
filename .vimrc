@@ -46,7 +46,7 @@ call vundle#begin('~/.Vim/bundle')
 Plugin 'VundleVim/Vundle.vim'
 
 "Plugin 'jlanzarotta/bufexplorer.git'
-Plugin 'kien/ctrlp.vim.git'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mbbill/fencview.git'
 Plugin 'vim-scripts/gtags.vim.git'
 Plugin 'tmhedberg/matchit.git'
@@ -129,7 +129,7 @@ set clipboard=unnamed
 set cursorline
 set incsearch
 
-"set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,latin1
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,latin1
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
