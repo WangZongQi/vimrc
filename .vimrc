@@ -1,5 +1,6 @@
 set nocompatible
 set shortmess=atI
+"set mouse=a
 
 if (has("win32") || has("win95") || has("win64") || has("win16"))
 	"maximum the initial window
@@ -70,6 +71,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'pboettch/vim-cmake-syntax'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
+Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'luochen1990/rainbow'
 
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'rking/ag.vim'
@@ -83,6 +86,40 @@ set omnifunc=syntaxcomplete#Complete
 
 syntax on
 
+" Rainbow
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+let g:rainbow_conf = {
+\	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+\	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
+\	'guis': [''],
+\	'cterms': [''],
+\	'operators': '_,_',
+\	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+\	'separately': {
+\		'*': {},
+\		'markdown': {
+\			'parentheses_options': 'containedin=markdownCode contained'
+\		},
+\		'lisp': {
+\			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3']
+\		},
+\		'haskell': {
+\			'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/\v\{\ze[^-]/ end=/}/ fold']
+\		},
+\		'vim': {
+\			'parentheses_options': 'containedin=vimFuncBody'
+\		},
+\		'perl': {
+\			'syn_name_prefix': 'perlBlockFoldRainbow'
+\		},
+\		'stylus': {
+\			'parentheses': ['start=/{/ end=/}/ fold contains=@colorableGroup']
+\		},
+\		'css': 0
+\	}
+\}
+
+
 " gTags
 set cscopetag
 set cscopeprg=gtags-cscope
@@ -93,7 +130,7 @@ let g:Gtags_OpenQuickfixWindow=0
 let g:airline#extensions#whitespace#show_message = 0
 
 " CtrlP
-let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_working_path_mode = 0
 
 "taglist
 "let Tlist_Auto_Update=1
@@ -138,15 +175,14 @@ let g:neocomplete#enable_at_startup = 1
 " Use smartcase.
 let g:neocomplete#enable_smart_case = 1
 
-cs add GTAGS
-cs add ../GTAGS
-cs add ../../GTAGS
-cs add ../../../GTAGS
-cs add ../../../../GTAGS
-cs add ../../../../../GTAGS
-cs add ../../../../../../GTAGS
-cs add ../../../../../../../GTAGS
-cs add ../../../../../../../../GTAGS
+" Add GTAGS
+let s:gtag_path = "GTAGS"
+for i in range(20)
+    if filereadable(s:gtag_path)
+        cs add s:gtag_path
+    endif
+    let s:gtag_path = "../".s:gtag_path
+endfor
 
 "set encoding=utf-8
 "set fileencodings=utf-8,cp936
@@ -193,3 +229,6 @@ function MyDiff()
   endif
 endfunction
 
+augroup filetype
+    autocmd! BufRead,BufNewFile BUILD set filetype=blade
+augroup end
