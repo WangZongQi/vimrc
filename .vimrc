@@ -53,7 +53,7 @@ Plugin 'vim-scripts/gtags.vim.git'
 Plugin 'tmhedberg/matchit.git'
 Plugin 'scrooloose/nerdcommenter.git'
 Plugin 'scrooloose/nerdtree.git'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/syntastic'
 Plugin 'vim-airline/vim-airline.git'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'easymotion/vim-easymotion.git'
@@ -66,13 +66,15 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'majutsushi/tagbar'
 Plugin 'ervandew/supertab'
 Plugin 'Shougo/neocomplete.vim'
-Plugin 'mhinz/vim-signify'
+"Plugin 'mhinz/vim-signify'
 Plugin 'tpope/vim-surround'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'pboettch/vim-cmake-syntax'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'luochen1990/rainbow'
+"Plugin 'python-mode/python-mode'
+Plugin 'davidhalter/jedi-vim'
 
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'rking/ag.vim'
@@ -88,37 +90,8 @@ syntax on
 
 " Rainbow
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
-let g:rainbow_conf = {
-\	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-\	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
-\	'guis': [''],
-\	'cterms': [''],
-\	'operators': '_,_',
-\	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
-\	'separately': {
-\		'*': {},
-\		'markdown': {
-\			'parentheses_options': 'containedin=markdownCode contained'
-\		},
-\		'lisp': {
-\			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3']
-\		},
-\		'haskell': {
-\			'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/\v\{\ze[^-]/ end=/}/ fold']
-\		},
-\		'vim': {
-\			'parentheses_options': 'containedin=vimFuncBody'
-\		},
-\		'perl': {
-\			'syn_name_prefix': 'perlBlockFoldRainbow'
-\		},
-\		'stylus': {
-\			'parentheses': ['start=/{/ end=/}/ fold contains=@colorableGroup']
-\		},
-\		'css': 0
-\	}
-\}
 
+set matchpairs=(:),{:},[:],<:>
 
 " gTags
 set cscopetag
