@@ -68,13 +68,19 @@ Plugin 'ervandew/supertab'
 Plugin 'Shougo/neocomplete.vim'
 "Plugin 'mhinz/vim-signify'
 Plugin 'tpope/vim-surround'
-Plugin 'nathanaelkane/vim-indent-guides'
+"Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'pboettch/vim-cmake-syntax'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'luochen1990/rainbow'
+"Plugin 'thiagoalessio/rainbow_levels.vim'
 "Plugin 'python-mode/python-mode'
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
+Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'rhysd/vim-clang-format'
+Plugin 'godlygeek/tabular'
+Plugin 'preservim/vim-markdown'
+"Plugin 'Yggdroot/indentLine'
 
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'rking/ag.vim'
@@ -109,6 +115,8 @@ let g:ctrlp_working_path_mode = 0
 "let Tlist_Auto_Update=1
 "let Tlist_GainFocus_On_ToggleOpen=1
 "let Tlist_Show_One_File=1
+
+let g:clang_format#detect_style_file=1
 
 colo monokai
 
@@ -205,3 +213,4 @@ endfunction
 augroup filetype
     autocmd! BufRead,BufNewFile BUILD set filetype=blade
 augroup end
+
